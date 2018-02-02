@@ -1,6 +1,6 @@
 appname := convertisseur
 
-CXX := gcc
+CXX := g++
 CXXFLAGS := -Wall -g
 
 srcfiles := $(shell find . -maxdepth 1 -name "*.cpp")
