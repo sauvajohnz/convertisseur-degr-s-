@@ -14,5 +14,4 @@ deploy:
   file: convertisseur.zip
   skip_cleanup: true
   on:
-    # git tag "nom_de_la_release"
     tags: true
