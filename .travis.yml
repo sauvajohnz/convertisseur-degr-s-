@@ -7,10 +7,12 @@ os:
 - linux
 script:
 - make
-- apt-get update && apt-get -y install zip
 - zip convertisseur *
-addons:
-  artifacts:
-    paths:
-    - convertisseur
-    - convertisseur.zip
+deploy:
+  provider: releases
+  api_key: $GITHUB_API_KEY
+  file: convertisseur.zip
+  skip_cleanup: true
+  on:
+    # git tag "nom_de_la_release"
+    tags: true
