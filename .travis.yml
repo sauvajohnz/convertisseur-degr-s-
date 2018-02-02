@@ -8,7 +8,7 @@ os:
 script:
 - make
 - apt-get update && apt-get -y install zip
-- zip convertisser *
+- zip convertisseur *
 addons:
   artifacts:
     paths:
