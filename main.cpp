@@ -8,10 +8,10 @@ int main()
     char continuerMenu('X');
     bool continuer(true);
     int choixMenu, temperatureAConvertir, temperatureConvertie;
-    cout << "**********************" << endl << "Conversion CELCIUS - FAHRENHEIT" << endl << "**********************" << endl;
+    cout << "********************************************" << endl << endl << "Conversion CELSIUS - FAHRENHEIT" << endl << endl << "********************************************" << endl;
     do{
         do{
-            cout << "---Menu---" << endl << "1 - <Celcius a Fahrenheit>" << endl << "2 - <Fahrenheit a Celcius>" <<endl << "----------" << endl;
+            cout << "---Menu---" << endl << "1 - <Celsius a Fahrenheit>" << endl << "2 - <Fahrenheit a Celsius>" <<endl << "----------" << endl;
             cin >> choixMenu;
 
         }while (choixMenu!=1 && choixMenu!=2);
