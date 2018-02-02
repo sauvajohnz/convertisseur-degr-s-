@@ -6,9 +6,8 @@ using namespace std;
 
 int main()
 {
-    char continuerMenu('X');
     bool continuer(true), continuerChoixMenu(true);
-    string choixMenu;
+    string choixMenu, continuerMenu;
     double temperatureAConvertir, temperatureConvertie;
     do{
         do{
@@ -60,15 +59,14 @@ int main()
         do{
             cout << "Voulez vous continuer ? (O/N)" << endl;
             cin >> continuerMenu;
-
-            if(continuerMenu=='O')
-                cout << endl;
-            else if(continuerMenu=='N')
+            if(continuerMenu=="N")
                 continuer = false;
             else
-                cout << "Vous avez mal repondu " << endl;
+            {
+                cout << "Mauvaise saisie, veuillez reessayer." << endl;
+            }
 
-        }while(continuerMenu!='O' && continuerMenu!='N');
+        }while(continuerMenu!="O" && continuerMenu!="N");
 
 
 
