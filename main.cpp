@@ -5,6 +5,7 @@ using namespace std;
 
 int main()
 {
+    char continuerMenu('X');
     bool continuer(true);
     int choixMenu, temperatureAConvertir, temperatureConvertie;
     cout << "**********************" << endl << "Conversion CELCIUS - FAHRENHEIT" << endl << "**********************" << endl;
@@ -21,14 +22,27 @@ int main()
         if(choixMenu==1)
         {
             temperatureConvertie = temperatureAConvertir * 1.8 + 32;
-            cout << temperatureAConvertir << "°C = " << temperatureConvertie << "°F" << endl;
-            }
+            cout << temperatureAConvertir << "Celsius = " << temperatureConvertie << "Fahrenheit" << endl;
+        }
         else if (choixMenu==2)
         {
             temperatureConvertie = (temperatureAConvertir - 32) / 1.8;
-             cout << temperatureAConvertir << "°F = " << temperatureConvertie << "°C" << endl;
-            }
+            cout << temperatureAConvertir << "Celsius = " << temperatureConvertie << "Fahrenheit" << endl;
+        }
+        do{
+            cout << "Voulez vous continuer ? (O/N)" << endl;
+            cin >> continuerMenu;
+
+            if(continuerMenu=='O')
+                cout << endl;
+            else if(continuerMenu=='N')
+                continuer = false;
+            else
+                cout << "Vous avez mal repondu " << endl;
+
+        }while(continuerMenu!='O' && continuerMenu!='N');
 
 
-    }while (!continuer);
+
+    }while (continuer);
 }
