@@ -7,14 +7,16 @@ int main()
 {
     char continuerMenu('X');
     bool continuer(true);
-    int choixMenu, temperatureAConvertir, temperatureConvertie;
-    cout << "********************************************" << endl << endl << "Conversion CELSIUS - FAHRENHEIT" << endl << endl << "********************************************" << endl;
+    int choixMenu;
+    double temperatureAConvertir, temperatureConvertie;
+    cout << "********************************************" << endl << endl << "Conversion CELSIUS - FAHRENHEIT/KELVIN" << endl << endl << "********************************************" << endl;
     do{
         do{
-            cout << "---Menu---" << endl << "1 - <Celsius a Fahrenheit>" << endl << "2 - <Fahrenheit a Celsius>" <<endl << "----------" << endl;
+            cout << "---Menu---" << endl << "1 - <Celsius a Fahrenheit>" << endl << "2 - <Fahrenheit a Celsius>" <<endl;
+            cout << endl << "3 - <Celsius a Kelvin> " << endl << "4 - <Kelvin a Celsius> " << endl << "----------" << endl;
             cin >> choixMenu;
 
-        }while (choixMenu!=1 && choixMenu!=2);
+        }while (choixMenu!=1 && choixMenu!=2 && choixMenu!=3 && choixMenu!=4);
 
         cout << "Choisissez la temperature a convertir" << endl;
         cin >> temperatureAConvertir;
@@ -28,6 +30,16 @@ int main()
         {
             temperatureConvertie = (temperatureAConvertir - 32) / 1.8;
             cout << temperatureAConvertir << "Celsius = " << temperatureConvertie << "Fahrenheit" << endl;
+        }
+        else if (choixMenu==3)
+        {
+            temperatureConvertie = temperatureAConvertir + 273.15;
+            cout << temperatureAConvertir << "Celsius = " << temperatureConvertie << "Kelvin" << endl;
+        }
+        else if (choixMenu==4)
+        {
+            temperatureConvertie = temperatureAConvertir - 273.15;
+            cout << temperatureAConvertir << "Kelvin = " << temperatureConvertie << "Celsius" << endl;
         }
         do{
             cout << "Voulez vous continuer ? (O/N)" << endl;
