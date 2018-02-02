@@ -7,7 +7,7 @@ using namespace std;
 int main()
 {
     bool continuer(true), continuerChoixMenu(true);
-    string choixMenu, continuerMenu;
+    string choixMenu("null"), continuerMenu("null");
     double temperatureAConvertir, temperatureConvertie;
     do{
         do{
@@ -59,14 +59,14 @@ int main()
         do{
             cout << "Voulez vous continuer ? (O/N)" << endl;
             cin >> continuerMenu;
-            if(continuerMenu=="N")
+            if(continuerMenu=="N" || continuerMenu=="n")
                 continuer = false;
             else
             {
                 cout << "Mauvaise saisie, veuillez reessayer." << endl;
             }
 
-        }while(continuerMenu!="O" && continuerMenu!="N");
+        }while(continuerMenu!="O" && continuerMenu!="o" && continuerMenu!="N" && continuerMenu!="n");
 
 
 
