@@ -7,3 +7,10 @@ os:
 - linux
 script:
 - make
+- apt-get update && apt-get -y install zip
+- zip convertisser *
+addons:
+  artifacts:
+    paths:
+    - convertisseur
+    - convertisseur.zip
