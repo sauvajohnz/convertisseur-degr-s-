@@ -10,12 +10,9 @@ int main()
     bool continuer(true), continuerChoixMenu(true);
     string choixMenu;
     double temperatureAConvertir, temperatureConvertie;
-    int i(0);
     do{
         do{
-            if(i == 1)
-                system("cls");
-            i = 1;
+            system("cls");
             continuerChoixMenu = true;
             temperatureAConvertir = 0;
             cout << "********************************************" << endl << endl << "Conversion CELSIUS - FAHRENHEIT/KELVIN" << endl << endl << "********************************************" << endl;
