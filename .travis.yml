@@ -1,0 +1,17 @@
+language: cpp
+sudo: required
+dist: trusty
+compiler:
+- g++
+os:
+- linux
+script:
+- make
+- zip convertisseur *
+deploy:
+  provider: releases
+  api_key: $GITHUB_API_KEY
+  file: convertisseur.zip
+  skip_cleanup: true
+  on:
+    tags: true
